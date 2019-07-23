@@ -14,7 +14,7 @@ class ArticleList extends PureComponent {
     })
   }
 
-  _keyExtractor = (item) => item.id
+  _keyExtractor = (item) => `${item.id}`
 
   _renderItem = ({ item }) => (
     <TouchableOpacity

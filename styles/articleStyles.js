@@ -6,7 +6,7 @@ const ArticleStyles = {
     padding: 10,
   },
   separator: {
-    borderWidth: 3
+    borderWidth: 1,
   }
 }
 
