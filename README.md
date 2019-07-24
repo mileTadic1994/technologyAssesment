@@ -1,4 +1,4 @@
-Applicaion is built using Expo CLI.
+Applicaion is built using Expo CLI. Since its much easy and fast to setup, and its suitabe for smaller apps like this.
 
 To start App run:
 
