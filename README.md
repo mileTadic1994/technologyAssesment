@@ -1,4 +1,7 @@
 Applicaion is built using Expo CLI. Since its much easy and fast to setup, and its suitabe for smaller apps like this.
+So first, you will need to install Expo CLI with following command
+
+npm install expo-cli --global
 
 To start App run:
 
