@@ -1,6 +1,6 @@
 import { createAppContainer, createStackNavigator } from 'react-navigation';
-import ArticleScreen from '../Views/Articles';
-import SingleArticleScreen from '../Views/Articles/SingleArticle';
+import ArticleScreen from '../views/articles';
+import SingleArticleScreen from '../views/articles/singleArticle';
 
 const AppStackNavigator = createStackNavigator({
   Articles: ArticleScreen,

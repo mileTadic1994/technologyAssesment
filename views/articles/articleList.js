@@ -1,15 +1,17 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import { Text, View, TouchableOpacity, FlatList } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import ArticleStyles from '../../styles/articleStyles';
+import dictionary from '../../dictionary/english';
+import routes from '../../utils/routes'
 
 const articleStyles = ArticleStyles.createStyles();
 
-class ArticleList extends PureComponent {
+class ArticleList extends Component {
 
-  handleOnPressItem = (item) => {
+  _handleOnPressItem = (item) => {
     const { navigation } = this.props;
-    navigation.navigate('SingleArticle', {
+    navigation.navigate(routes.singleArticle, {
       article: item,
     })
   }
@@ -19,7 +21,7 @@ class ArticleList extends PureComponent {
   _renderItem = ({ item }) => (
     <TouchableOpacity
       style={articleStyles.listItem}
-      onPress={() => this.handleOnPressItem(item)}
+      onPress={() => this._handleOnPressItem(item)}
     >
       <Text>{item.title}</Text>
     </TouchableOpacity>
@@ -31,7 +33,7 @@ class ArticleList extends PureComponent {
 
   render() {
     const { articles } = this.props;
-    if (articles.length === 0) return <Text>List is empty...</Text>
+    if (articles.length === 0) return <Text>{dictionary.emptyList}</Text>
     return (
       <FlatList
         data={articles}
