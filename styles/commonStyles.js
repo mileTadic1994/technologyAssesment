@@ -11,6 +11,9 @@ const CommonStyles = {
   textDanger: {
     color: 'red'
   },
+  textCenter: {
+    textAlign: 'center',
+  }
 }
 
 function createStyles(overrides = {}) {

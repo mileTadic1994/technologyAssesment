@@ -1,1 +1,0 @@
-export default 'Chom0VvAYApKdJYAfCoXGVADl9t0r3Ny';
