@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import { getMostPopularArticles } from '../../services/articlesService';
+import { getMostPopularArticles, SECTIONS, PERIODS } from '../../services/articlesService';
 import ArticleList from './articleList';
 import CommonStyles from '../../styles/commonStyles';
 
@@ -21,7 +21,7 @@ export default class Articles extends Component {
 
   async componentDidMount() {
     try {
-      const response = await getMostPopularArticles('all-sections', 7)();
+      const response = await getMostPopularArticles(SECTIONS.ALL, PERIODS.WEEK)();
       const articles = response.data.results;
       this.setState({
         articles,
